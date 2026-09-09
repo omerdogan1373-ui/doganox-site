@@ -30,7 +30,7 @@
     }
 
     header {
-      min-height: 92vh;
+      min-height: 88vh;
       display: flex;
       align-items: center;
       text-align: center;
@@ -75,7 +75,7 @@
     }
 
     section {
-      padding: 70px 0;
+      padding: 66px 0;
     }
 
     .section-title {
@@ -87,7 +87,7 @@
     .section-subtitle {
       text-align: center;
       max-width: 680px;
-      margin: 0 auto 38px;
+      margin: 0 auto 34px;
       color: #9caabe;
     }
 
@@ -97,7 +97,8 @@
       gap: 20px;
     }
 
-    .card {
+    .card,
+    .info-box {
       background: #101725;
       border: 1px solid #25334c;
       border-radius: 18px;
@@ -105,13 +106,15 @@
       box-shadow: 0 12px 30px rgba(0,0,0,.2);
     }
 
-    .card h3 {
-      color: #61b5ff;
+    .card h3,
+    .info-box h3 {
+      color: #6ebcff;
       margin-bottom: 12px;
       font-size: 21px;
     }
 
-    .card p {
+    .card p,
+    .info-box p {
       color: #b8c3d3;
     }
 
@@ -131,21 +134,9 @@
       font-size: 20px;
     }
 
-    .info-box {
-      background: linear-gradient(180deg, #101725, #0b111d);
-      border: 1px solid #26344c;
-      border-radius: 20px;
-      padding: 34px;
-      margin-bottom: 22px;
-    }
-
-    .info-box h3 {
-      color: #6ebcff;
-      margin-bottom: 12px;
-    }
-
-    .info-box p {
-      color: #b9c4d4;
+    .info-list {
+      display: grid;
+      gap: 18px;
     }
 
     .notice {
@@ -154,7 +145,34 @@
       background: #0e1725;
       border-radius: 10px;
       color: #bac5d5;
-      margin-top: 28px;
+      margin-top: 26px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .contact-item {
+      background: #0f1623;
+      border: 1px solid #25334c;
+      border-radius: 16px;
+      padding: 22px;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: #6ebcff;
+      margin-bottom: 8px;
+    }
+
+    .contact-item span,
+    .contact-item a {
+      color: #c2ccda;
+      text-decoration: none;
+      word-break: break-word;
     }
 
     .support {
@@ -189,19 +207,20 @@
 
     @media (max-width: 600px) {
       header {
-        min-height: 82vh;
+        min-height: 80vh;
       }
 
       section {
-        padding: 55px 0;
+        padding: 54px 0;
       }
 
       .hero-text {
         font-size: 16px;
       }
 
+      .card,
       .info-box {
-        padding: 24px;
+        padding: 22px;
       }
     }
   </style>
@@ -217,7 +236,7 @@
     </div>
 
     <p class="hero-text">
-      Dijital ürün ve lisans anahtarlarını hızlı, güvenli ve kolay şekilde
+      Dijital ürün ve lisans anahtarlarını hızlı ve kolay şekilde
       satın alabileceğiniz online satış platformu.
     </p>
 
@@ -231,7 +250,7 @@
   <div class="container">
     <h2 class="section-title">Ürünlerimiz</h2>
     <p class="section-subtitle">
-      Farklı kullanım sürelerine ve ihtiyaçlara uygun dijital lisans seçeneklerini
+      Farklı kullanım sürelerine uygun dijital lisans seçeneklerini
       mağazamız üzerinden inceleyebilirsiniz.
     </p>
 
@@ -255,8 +274,8 @@
       <div class="card">
         <h3>Haftalık Seçenekler</h3>
         <p>
-          Haftalık ve daha uzun süreli dijital lisans seçenekleri
-          stok durumuna göre satışa sunulmaktadır.
+          Haftalık ve uzun süreli dijital lisans seçenekleri
+          stok durumuna göre satışa sunulur.
         </p>
       </div>
 
@@ -264,7 +283,7 @@
         <h3>Dijital Teslimat</h3>
         <p>
           Satın alınan ürünler fiziksel kargo ile değil,
-          elektronik ortamda teslim edilmektedir.
+          elektronik ortamda teslim edilir.
         </p>
       </div>
     </div>
@@ -275,26 +294,26 @@
   <div class="container">
     <h2 class="section-title">Nasıl Çalışır?</h2>
     <p class="section-subtitle">
-      Sipariş süreci basit ve hızlı şekilde tamamlanır.
+      Sipariş süreci üç basit adımda tamamlanır.
     </p>
 
     <div class="grid">
       <div class="card">
         <div class="step-number">1</div>
-        <h3>Ürününü Seç</h3>
-        <p>Telegram mağazamızdan satın almak istediğiniz ürünü ve süreyi seçin.</p>
+        <h3>Ürün Seçimi</h3>
+        <p>Telegram mağazamızdan ürün ve süre seçimi yapılır.</p>
       </div>
 
       <div class="card">
         <div class="step-number">2</div>
-        <h3>Ödemeyi Yap</h3>
-        <p>Sunulan ödeme yöntemlerinden uygun olanı kullanarak ödemenizi gerçekleştirin.</p>
+        <h3>Ödeme</h3>
+        <p>Sunulan ödeme yöntemlerinden biriyle ödeme tamamlanır.</p>
       </div>
 
       <div class="card">
         <div class="step-number">3</div>
-        <h3>Onay ve Teslimat</h3>
-        <p>Ödeme doğrulandıktan sonra dijital ürününüz elektronik ortamda teslim edilir.</p>
+        <h3>Teslimat</h3>
+        <p>Ödeme doğrulandıktan sonra dijital ürün elektronik ortamda teslim edilir.</p>
       </div>
     </div>
   </div>
@@ -304,62 +323,93 @@
   <div class="container">
     <h2 class="section-title">Kurumsal Bilgiler</h2>
     <p class="section-subtitle">
-      Sipariş, teslimat ve kullanım süreçleriyle ilgili temel bilgiler.
+      Sipariş, teslimat, iade ve gizlilik süreçleri hakkında temel bilgiler.
     </p>
 
-    <div class="info-box">
-      <h3>Hakkımızda</h3>
-      <p>
-        DOGANOX STORE, dijital ürün ve lisans anahtarı satışına yönelik
-        online bir satış platformudur. Müşteriler ürünlerini Telegram mağazamız
-        üzerinden seçebilir, ödeme sürecini tamamlayabilir ve satın alınan
-        dijital ürünü elektronik ortamda teslim alabilir.
-      </p>
-    </div>
+    <div class="info-list">
+      <div class="info-box">
+        <h3>Hakkımızda</h3>
+        <p>
+          DOGANOX STORE, dijital ürün ve lisans anahtarı satışı için
+          hizmet veren online bir mağazadır. Siparişler Telegram mağazamız
+          üzerinden alınır ve ürünler elektronik ortamda teslim edilir.
+        </p>
+      </div>
 
-    <div class="info-box">
-      <h3>Teslimat Politikası</h3>
-      <p>
-        Satışı gerçekleştirilen ürünler dijital niteliktedir. Fiziksel kargo
-        gönderimi yapılmaz. Ödeme doğrulaması ve sipariş onayının ardından
-        ürün, sistem veya Telegram üzerinden elektronik olarak teslim edilir.
-        Teslimat süresi stok ve ödeme doğrulama durumuna göre değişebilir.
-      </p>
-    </div>
+      <div class="info-box">
+        <h3>Teslimat Politikası</h3>
+        <p>
+          Ürünler dijital niteliktedir ve fiziksel kargo gönderimi yapılmaz.
+          Ödeme doğrulamasının ardından sipariş, stok durumuna göre
+          elektronik ortamda teslim edilir.
+        </p>
+      </div>
 
-    <div class="info-box">
-      <h3>İptal ve İade</h3>
-      <p>
-        Dijital ürünlerde teslimat gerçekleştikten ve lisans anahtarı kullanıcıya
-        iletildikten sonra ürünün niteliği gereği iade imkanı sınırlı olabilir.
-        Hatalı, eksik veya teknik problem bulunan siparişlerde müşteri destek
-        hattımız üzerinden inceleme yapılır.
-      </p>
-    </div>
+      <div class="info-box">
+        <h3>İptal ve İade</h3>
+        <p>
+          Dijital ürün teslim edilmeden önce iptal talepleri destek üzerinden
+          değerlendirilebilir. Teslim edilmiş ve kullanıma açılmış lisanslarda,
+          ürünün dijital niteliği nedeniyle iade imkânı sınırlı olabilir.
+          Hatalı veya eksik teslimat durumları ayrıca incelenir.
+        </p>
+      </div>
 
-    <div class="info-box">
-      <h3>Gizlilik</h3>
-      <p>
-        Sipariş sürecinde paylaşılan bilgiler yalnızca siparişin işlenmesi,
-        ödeme kontrolü, müşteri desteği ve hizmetin sunulması amacıyla kullanılır.
-        Kullanıcı bilgilerinin güvenliği ve gizliliği önemsenmektedir.
-      </p>
+      <div class="info-box">
+        <h3>Gizlilik</h3>
+        <p>
+          Sipariş sırasında paylaşılan bilgiler; siparişin işlenmesi,
+          ödeme kontrolü, teslimat ve müşteri desteği amacıyla kullanılır.
+          Bilgiler hizmetin gerektirdiği ölçüde işlenir.
+        </p>
+      </div>
     </div>
 
     <div class="notice">
-      Ödeme yapmadan önce ürün, stok, süre ve teslimat bilgilerini kontrol etmeniz önerilir.
-      Destek gerektiren durumlarda Telegram üzerinden bizimle iletişime geçebilirsiniz.
+      Sipariş vermeden önce ürün, süre, stok ve teslimat bilgilerini kontrol edin.
+      Sorularınız için Telegram destek kanalımızı kullanabilirsiniz.
+    </div>
+  </div>
+</section>
+
+<section id="iletisim">
+  <div class="container">
+    <h2 class="section-title">İletişim ve Mağaza Bilgileri</h2>
+    <p class="section-subtitle">
+      Sipariş ve destek talepleriniz için aşağıdaki kanalı kullanabilirsiniz.
+    </p>
+
+    <div class="contact-grid">
+      <div class="contact-item">
+        <strong>Mağaza Adı</strong>
+        <span>DOGANOX STORE</span>
+      </div>
+
+      <div class="contact-item">
+        <strong>Satış Kanalı</strong>
+        <a href="https://t.me/DOGANOX_bot">@DOGANOX_bot</a>
+      </div>
+
+      <div class="contact-item">
+        <strong>Teslimat Türü</strong>
+        <span>Dijital / Elektronik Teslimat</span>
+      </div>
+
+      <div class="contact-item">
+        <strong>Destek</strong>
+        <a href="https://t.me/DOGANOX_bot">Telegram üzerinden iletişim</a>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="support">
   <div class="container">
-    <h2 class="section-title">Destek ve İletişim</h2>
+    <h2 class="section-title">Destek</h2>
 
     <p>
-      Sipariş, ödeme, teslimat veya ürünler hakkında destek almak için
-      Telegram mağazamız üzerinden bizimle iletişime geçebilirsiniz.
+      Sipariş, ödeme veya teslimatla ilgili destek almak için
+      Telegram mağazamız üzerinden bize ulaşabilirsiniz.
     </p>
 
     <a class="btn" href="https://t.me/DOGANOX_bot">
@@ -373,7 +423,7 @@
     <div class="footer-links">
       <a href="#urunler">Ürünler</a>
       <a href="#kurumsal">Kurumsal</a>
-      <a href="https://t.me/DOGANOX_bot">Destek</a>
+      <a href="#iletisim">İletişim</a>
     </div>
 
     © 2026 DOGANOX STORE -- Tüm hakları saklıdır.
